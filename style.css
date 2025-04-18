@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+:root {
+  --body-color: #ffe28c;
+  --body-background-color-light: #dc3545;
+  --body-background-color-dark: #460f16;
+  --grid-gap: 40px;
+
+  color-scheme: light dark;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: var(--body-color);
+  background-color: light-dark(
+    var(--body-background-color-light),
+    var(--body-background-color-dark)
+  );
+  font-family: 'Germania One', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+a {
+  color: var(--body-color);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: var(--grid-gap);
+  height: calc(100dvh - (var(--grid-gap) * 2));
+  margin: var(--grid-gap);
+}
+
+header {
+  align-self: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 7.2rem;
+  line-height: 1;
+}
+
+footer {
+  align-self: end;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  white-space: nowrap;
+}
